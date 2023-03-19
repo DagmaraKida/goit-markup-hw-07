@@ -1,50 +1,46 @@
 .buttons {
-    margin-bottom: 34px;
-    text-align: center;
-  }
-  
-  .button {
-    font-family: "Roboto";
-    font-weight: 500;
-    font-size: 16px;
-    text-align: center;
-    border: 0;
-    border-radius: 4px;
-    width: 200px;
-    height: 50px;
-    line-height: 1.6;
-    letter-spacing: 0.06em;
-    color: var(--white);
-    background-color: var(--blue);
-    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .portfolio__button {
-    padding: 6px 22px;
-    max-width: 121px;
-    height: 38px;
-    line-height: 1.39;
-    letter-spacing: 0.03em;
-    color: var(--black);
-    background-color: var(--light-grey);
-    box-shadow: 0px 0px 0px 0px;
-  }
-  
-  .portfolio__button:not(:last-child) {
-    margin-right: 8px;
-  }
-  .button:hover,
-  .button:focus {
-    cursor: pointer;
-    background-color: #1976d2;
-    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
-    transition: color 250ms var(--cubic-bezier), background-color 250ms var(--cubic-bezier);
-  }
-  .portfolio__button:hover,
-  .portfolio__button:focus {
-    color: var(--white);
-    background-color: var(--blue);
-  }
+  margin-bottom: 34px;
+  text-align: center;
+}
+
+.button {
+  font-family: "Roboto";
+  @include font(16px, 500, 1.6, 0.06em);
+  text-align: center;
+  border: 0;
+  border-radius: $borderRadius;
+  width: 200px;
+  height: 50px;
+  color: map-get($colors, "light");
+  background-color: map-get($colors, "link");
+  box-shadow: $boxShadow;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio__button {
+  padding: 6px 22px;
+  max-width: 121px;
+  height: 38px;
+  @include font(16px, 500, 1.39, 0.03em);
+  color: map-get($colors, "primary");
+  background-color: map-get($colors, "team");
+  box-shadow: $boxShadow;
+}
+
+.portfolio__button:not(:last-child) {
+  margin-right: 8px;
+}
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  background-color: map-get($colors, "highlight");
+  box-shadow: $boxShadow;
+  transition: color 250ms $transitionTimingFunction, background-color 250ms $transitionTimingFunction;
+}
+.portfolio__button:hover,
+.portfolio__button:focus {
+  color: map-get($colors, "light");
+  background-color: map-get($colors, "link");
+}

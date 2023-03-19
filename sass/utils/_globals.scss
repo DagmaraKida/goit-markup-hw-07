@@ -3,10 +3,8 @@
 }
 
 body {
-  background-color: var(--white);
-  color: var(--black);
+  color: map-get($colors, "primary");
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
 }
 
 ul {
@@ -25,51 +23,39 @@ ul {
 }
 
 a,
-  a:visited {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  a:hover,
-  a:focus {
-    color: var(--blue);
-    transition: color 250ms var(--cubic-bezier);
-  }
-  
-  h2 /* .section__heading */ {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0.03em;
-    text-align: center;
-    margin: 0;
-  }
-  
-  h3 /* .portfolio__title */ {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.71;
-    letter-spacing: 0.06em;
-    margin: 0;
-    margin-bottom: 4px;
-  }
-  
-  h4 /* .team__title ?*/ {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: 0.03em;
-    text-align: center;
-    margin: 0;
-  }
-  
-  h5 /* .examples__label ?*/ {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0.03em;
-    text-align: left;
-    text-transform: uppercase;
-    color: var(--black);
-    margin: 0;
-  }
+&:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+&:hover,
+&:focus {
+  color: map-get($colors, "link");
+  transition: color 250ms $transitionTimingFunction;
+}
+
+h2 /* .section__heading */ {
+  @include font(36px, 700, 1, 0.03em);
+  text-align: center;
+  margin: 0;
+}
+
+h3 /* .portfolio__title .modal__title */ {
+  @include font(18px, 700, 1.71, 0.06em);
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+h4 /* .team__title */ {
+  @include font(16px, 500, 1, 0.03em);
+  text-align: center;
+  margin: 0;
+}
+
+h5 /* .examples__label .footer_heading */ {
+  @include font(14px, 700, 1, 0.03em);
+  text-align: left;
+  text-transform: uppercase;
+  color: map-get($colors, "primary");
+  margin: 0;
+}

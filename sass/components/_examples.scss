@@ -9,15 +9,14 @@
 }
 
 .examples__content {
-  color: var(--grey);
-  line-height: 1.46;
-  letter-spacing: 0.03em;
+  color: map-get($colors, "contact");
+  @include font(14px, 400, 1.71, 0.03em);
   margin: 10px 0 0 0;
 }
 
 .examples__icon {
-  background-color: var(--light-grey);
-  border-radius: 4px;
+  background-color: map-get($colors, "team");
+  border-radius: $borderRadius;
   padding: 25px 100px;
   margin-bottom: 30px;
 }

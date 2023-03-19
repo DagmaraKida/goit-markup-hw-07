@@ -1,76 +1,72 @@
 .header {
-    border-bottom: 1px solid #ececec;
-    background-color: #fff;
-    height: 80px;
-    display: flex;
-    align-items: center;
-  }
+  border-bottom: 1px solid map-get($colors, "contact");
+  background-color: map-get($colors, "light");
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
 
-  /* MAIN NAVIGATION */
+/* MAIN NAVIGATION */
 
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  .nav {
-    display: flex;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: 0.02em;
-  }
-  
-  .nav__link {
-    padding: 32px 0;
-  }
-  
-  .nav__link:not(:last-child) {
-    margin-right: 32px;
-  }
-  
-  .nav__link--active {
-    position: relative;
-    color: var(--blue);
-  }
-  
-  .nav__link--active::after {
-    position: absolute;
-    bottom: 0;
-    content: "";
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: currentColor;
-    border-radius: 2px;
-  }
-  
-   /* CONTACT LINKS IN MAIN NAVIGATION */
-  
-   .contact {
-    color: var(--grey);
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: 0.02em;
-    display: flex;
-    margin-left: auto;
-    align-items: center;
-  }
-  
-  .contact li:not(:last-child) {
-    margin-right: 50px;
-  }
-  .contact__link {
-    display: flex;
-    align-items: center;
-  }
-  .contact__icon {
-    margin-right: 10px;
-    fill: #757575;
-  }
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
-  .contact__link:hover .contact__icon,
-  .contact__link:focus .contact__icon {
-    fill: var(--blue);
-    transition: fill 250ms var(--cubic-bezier);
-  }
+.nav {
+  display: flex;
+  @include font(14px, 500, 1, 0.02em);
+}
+
+.nav__link {
+  padding: 32px 0;
+}
+
+.nav__link:not(:last-child) {
+  margin-right: 32px;
+}
+
+.nav__link--active {
+  position: relative;
+  color: map-get($colors, "link");
+}
+
+.nav__link--active::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: currentColor;
+  border-radius: 2px;
+}
+
+/* CONTACT LINKS IN MAIN NAVIGATION */
+
+.contact {
+  color: map-get($colors, "contact");
+  @include font(14px, 500, 1, 0.02em);
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.contact li:not(:last-child) {
+  margin-right: 50px;
+}
+.contact__link {
+  display: flex;
+  align-items: center;
+}
+.contact__icon {
+  margin-right: 10px;
+  fill: map-get($colors, "contact");
+}
+
+.contact__link:hover .contact__icon,
+.contact__link:focus .contact__icon {
+  fill: map-get($colors, "link");
+  transition: fill 250ms $transitionTimingFunction;
+}

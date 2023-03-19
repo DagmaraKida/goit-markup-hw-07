@@ -1,17 +1,14 @@
 .logo {
-    font-family: "Relaway", sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0.03em;
-    text-align: left;
-    margin-right: 93px;
-  }
-  
-  .logo__web {
-    color: var(--blue);
-  }
-  
-  .logo__studio {
-    color: var(--white);
-  }
+  font-family: "Relaway", sans-serif;
+  @include font(26px, 700, 1, 0.03em);
+  text-align: left;
+  margin-right: 93px;
+}
+
+.logo__web {
+  color: map-get($colors, "link");
+}
+
+.logo__studio {
+  color: map-get($colors, "light");
+}

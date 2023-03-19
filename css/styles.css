@@ -527,6 +527,9 @@ h5 /* .examples__label */ {
 
 /* ADDRESS LINKS IN FOOTER */
 
+.address {
+  margin-right: 80px;
+}
 .address__links {
   color: var(--white);
   font-weight: 400;
@@ -536,7 +539,7 @@ h5 /* .examples__label */ {
   font-style: normal;
 }
 
-.address__links .contact {
+.address__link .contact {
   opacity: 0.6;
 }
 
@@ -544,9 +547,7 @@ h5 /* .examples__label */ {
   margin-bottom: 9px;
 }
 
-.address {
-  margin-right: 80px;
-}
+
 .footer__social-links {
   margin-right: 98px;
 }

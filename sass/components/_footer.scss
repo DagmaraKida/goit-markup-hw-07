@@ -1,0 +1,16 @@
+.footer__section {
+  background-color: map-get($colors, "background");
+  background-size: cover;
+  height: 252px;
+  display: flex;
+  align-items: center;
+}
+.footer {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__heading {
+  color: map-get($colors, 'light');
+  margin-bottom: 20px;
+}

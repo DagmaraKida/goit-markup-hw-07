@@ -1,178 +1,167 @@
-
 .backdrop {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-  
-  .is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-  
-  .is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.25);
-  }
-  
-  .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 528px;
-    min-height: 581px;
-    background-color: #fff;
-    box-shadow: var(--box-shadows);
-    border-radius: 4px;
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 350ms var(--cubic-bezier);
-  }
-  
-  .modal__close {
-    display: block;
-    margin-left: auto;
-    margin-top: 8px;
-    margin-right: 8px;
-    padding: 6px;
-    max-width: 32px;
-    max-height: 32px;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    cursor: pointer;
-    color: var(--black);
-  }
-  
-  .modal__close:hover,
-  .modal__close:focus {
-    fill: var(--blue);
-    border-color: var(--blue);
-    transition: fill 250ms var(--cubic-bezier) border-color 250ms var(--cubic-bezier);
-  }
-  
-  .modal__title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin-bottom: 12px;
-  }
-  
-  form[name="modal-form"] {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 40px;
-    padding-top: 0;
-  }
-  
-  .modal__item {
-    color: var(--grey);
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    position: relative;
-  }
-  
-  .modal__input {
-    outline: none;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    padding-left: 42px;
-    height: 40px;
-  }
-  
-  .modal__item svg {
-    position: absolute;
-    top: 28px;
-    left: 12px;
-  }
-  
-  .modal__textarea {
-    outline: none;
-    resize: none;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    padding: 14px 16px 10px 16px;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: var(--black);
-  }
-  
-  .modal__textarea::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-  }
-  
-  .modal__input:focus,
-  .modal__input:focus + svg,
-  .modal__input:hover,
-  .modal__input:hover + svg,
-  .modal__textarea:focus,
-  .modal__textarea:hover {
-    border-color: var(--blue);
-    fill: var(--blue);
-    transition: border-color 250ms var(--cubic-bezier), fill 250ms var(--cubic-bezier);
-  }
-  .checkbox {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    position: relative;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .checkbox__input {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    width: 16px;
-    height: 15px;
-    position: absolute;
-    left: 15px;
-    background-color: var(--white);
-    border: 2px solid var(--black);
-    border-radius: 2px;
-  }
-  
-  .checkbox__input:hover {
-    border-color: var(--blue);
-  }
-  
-  .checkbox__input:checked {
-    opacity: 0;
-    background-color: var(--blue);
-    transition: opacity 250ms var(--cubic-bezier);
-  }
-  
-  .checkbox span {
-    font-size: 14px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
-    color: var(--grey);
-  }
-  
-  .checkbox span a {
-    color: var(--blue);
-    text-decoration: underline;
-  }
-  
-  .checkbox span a:hover,
-  .checkbox span a:focus {
-    color: #1976d2;
-    text-decoration: none;
-  }
-  
-  .modal__button {
-    margin: auto;
-  }
-  
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: map-get($colors, "backdrop");
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.25);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 528px;
+  min-height: 581px;
+  background-color: map-get($colors, "light");
+  box-shadow: $boxShadow2;
+  border-radius: $borderRadius;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 350ms $transitionTimingFunction;
+}
+
+.modal__close {
+  display: block;
+  margin-left: auto;
+  margin-top: 8px;
+  margin-right: 8px;
+  padding: 6px;
+  max-width: 32px;
+  max-height: 32px;
+  background-color: map-get($colors, "light");
+  border: 1px solid map-get($colors, "backdrop");
+  border-radius: 50%;
+  cursor: pointer;
+  color: map-get($colors, "primary");
+}
+
+.modal__close:hover,
+.modal__close:focus {
+  fill: map-get($colors, "link");
+  border-color: map-get($colors, "link");
+  transition: fill 250ms $transitionTimingFunction border-color 250ms $transitionTimingFunction;
+}
+
+.modal__title {
+  @include font(20px, 700, 1.15, 0.03em);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+form[name="modal-form"] {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px;
+  padding-top: 0;
+}
+
+.modal__item {
+  color: map-get($colors, "contact");
+  @include font(12px, 400, 1.16, 0.01em);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.modal__input {
+  outline: none;
+  border: 1px solid map-get($colors, "textarea");
+  border-radius: $borderRadius;
+  padding-left: 42px;
+  height: 40px;
+}
+
+.modal__item svg {
+  position: absolute;
+  top: 28px;
+  left: 12px;
+}
+
+.modal__textarea {
+  outline: none;
+  resize: none;
+  border: 1px solid map-get($colors, "textarea");
+  border-radius: $borderRadius;
+  padding: 14px 16px 10px 16px;
+  @include font(12px, 400, 1.16, 0.01em);
+  color: map-get($colors, "textarea");
+}
+
+.modal__textarea::placeholder {
+  color: currentColor;
+}
+
+.modal__input:focus,
+.modal__input:focus + svg,
+.modal__input:hover,
+.modal__input:hover + svg,
+.modal__textarea:focus,
+.modal__textarea:hover {
+  border-color: map-get($colors, "link");
+  fill: map-get($colors, "link");
+  transition: border-color 250ms $transitionTimingFunction, fill 250ms $transitionTimingFunction;
+}
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.checkbox__input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 15px;
+  position: absolute;
+  left: 15px;
+  background-color: map-get($colors, "light");
+  border: 2px solid map-get($colors, "primary");
+  border-radius: 2px;
+}
+
+.checkbox__input:hover {
+  border-color: map-get($colors, "link");
+}
+
+.checkbox__input:checked {
+  opacity: 0;
+  background-color: map-get($colors, "link");
+  transition: opacity 250ms $transitionTimingFunction;
+}
+
+.checkbox span {
+  @include font(14px, 400, 1.5, 0.03em);
+  color: map-get($colors, "contact");
+}
+
+.checkbox span a {
+  color: map-get($colors, "link");
+  text-decoration: underline;
+}
+
+.checkbox span a:hover,
+.checkbox span a:focus {
+  color: map-get($colors, "highlight");
+  text-decoration: none;
+}
+
+.modal__button {
+  margin: auto;
+}

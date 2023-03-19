@@ -1,38 +1,39 @@
+.address {
+  margin-right: 80px;
+}
 
 .address__links {
-    color: var(--white);
-    font-weight: 400;
-    line-height: 1.46;
-    letter-spacing: 0.03em;
-    margin-top: 20px;
-    font-style: normal;
-  }
-  
-  .address__links .contact {
-    opacity: 0.6;
-  }
-  
-  .address__link:not(:last-child) {
-    margin-bottom: 9px;
-  }
-  
-  .address {
-    margin-right: 80px;
-  }
-  .footer__social-links {
-    margin-right: 98px;
-  }
-  .footer {
-    display: flex;
-    align-items: baseline;
-  }
-  
-  .footer__heading {
-    color: var(--white);
-    margin-bottom: 20px;
-  }
-  
-  .icon-send {
-    margin-left: 24px;
-    fill: var(--white);
-  }
+  font-style: normal;
+  @include font(14px, 400, 1.71, 0.03em);
+  color: map-get($colors, "light");
+  margin-top: 20px;
+}
+
+.address__link .contact {
+  opacity: 0.6;
+}
+
+.address__link:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+/* .address {
+  margin-right: 80px;
+}
+
+.address__links {
+  font-style: normal;
+  @include font(14px, 400, 1.71, 0.03em);
+  color: map-get($colors, "light");
+  margin-top: 20px;
+}
+
+.address__link .contact {
+  opacity: 0.6;
+}
+
+.address__link:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+ */

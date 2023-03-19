@@ -1,26 +1,19 @@
-:root {
-    --black: #212121;
-    --grey: #757575;
-    --dark-grey: #2f303a;
-    --light-grey: #f5f4fa;
-    --blue: #2196f3;
-    --white: #ffffff;}
-/*  */
-
-
 $colors: (
-  'light': #fff,
-  'team': #f5f4fa,
-  'dark': #000,
-  'primary': #212121,
-  'link': #2196f3,
-  'contact': #757575,
-  'icons': #afb1b8,
-  'border': #eee,
-  'portfolioBox': rgba(33, 150, 243, 0.9),
-  'boxed': rgba(47, 48, 58, 0.8),
-  'footerContact': rgba(255, 255, 255, 0.6),
-  'background': #2f303a,
+  "light": #fff,
+  "team": #f5f4fa,
+  "dark": #000,
+  "primary": #212121,
+  "link": #2196f3,
+  "contact": #757575,
+  "icons": #afb1b8,
+  "border": #eee,
+  "highlight": #1976d2,
+  "portfolioBox": rgba(33, 150, 243, 0.9),
+  "boxed": rgba(47, 48, 58, 0.8),
+  "footerContact": rgba(255, 255, 255, 0.6),
+  "footerSocial": rgba(255, 255, 255, 0.1),
+  "background": #2f303a,
+  "textarea": rgba(117, 117, 117, 0.5) "backdrop": rgba(0, 0, 0, 0.1),
 );
 
 $borderRadius: 4px;
