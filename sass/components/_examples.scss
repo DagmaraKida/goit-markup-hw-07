@@ -1,0 +1,23 @@
+.examples__cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 94px;
+}
+
+.examples__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.examples__content {
+  color: var(--grey);
+  line-height: 1.46;
+  letter-spacing: 0.03em;
+  margin: 10px 0 0 0;
+}
+
+.examples__icon {
+  background-color: var(--light-grey);
+  border-radius: 4px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}

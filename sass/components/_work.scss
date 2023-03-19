@@ -1,0 +1,39 @@
+
+.work__cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  
+  .work__image {
+    margin: 0;
+  }
+  
+  .work__image:not(last-child) {
+    margin-right: 30;
+  }
+  
+  .work__cards figure {
+    position: relative;
+    height: 294px;
+  }
+  
+  .work__cards figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+  
+  .work__label {
+    padding: 27px 0;
+    margin: 0;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  
