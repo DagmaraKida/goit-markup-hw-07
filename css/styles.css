@@ -681,6 +681,7 @@ h5 /* .examples__label */ {
   fill: var(--blue);
   transition: border-color 250ms var(--cubic-bezier), fill 250ms var(--cubic-bezier);
 }
+
 .checkbox {
   display: inline-flex;
   align-items: center;
@@ -714,20 +715,20 @@ h5 /* .examples__label */ {
   transition: opacity 250ms var(--cubic-bezier);
 }
 
-.checkbox span {
+.checkbox__text {
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--grey);
 }
 
-.checkbox span a {
+.checkbox a {
   color: var(--blue);
   text-decoration: underline;
 }
 
-.checkbox span a:hover,
-.checkbox span a:focus {
+.checkbox a:hover,
+.checkbox a:focus {
   color: #1976d2;
   text-decoration: none;
 }

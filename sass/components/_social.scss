@@ -20,17 +20,17 @@
   border-radius: 50%;
   display: inline-flex;
 
+  .footer__social-links & {
+    fill: map-get($colors, "light");
+    background-color: map-get($colors, "footerSocial");
+    margin-top: 0;
+  }
+
   &:hover,
   &:focus {
     background-color: map-get($colors, "link");
     fill: map-get($colors, "light");
     transition: background-color 250ms $transitionTimingFunction, fill 250ms $transitionTimingFunction;
-  }
-
-  .footer__social-links & {
-    fill: map-get($colors, "light");
-    background-color: map-get($colors, "footerSocial");
-    margin-top: 0;
   }
 }
 

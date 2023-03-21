@@ -74,8 +74,6 @@
     position: relative;
   }
 
-  /* before .modal__item svg  */
-
   &__icon {
     position: absolute;
     top: 28px;
@@ -134,7 +132,7 @@
   margin-top: 10px;
   margin-bottom: 20px;
 
-  .checkbox__input {
+  &__input {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;

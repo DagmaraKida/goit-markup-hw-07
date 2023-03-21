@@ -1,5 +1,5 @@
 .header {
-  border-bottom: 1px solid map-get($colors, "contact");
+  border-bottom: 1px solid map-get($colors, "border");
   background-color: map-get($colors, "light");
   height: 80px;
   display: flex;
@@ -57,12 +57,12 @@
   &__icon {
     margin-right: 10px;
     fill: map-get($colors, "contact");
-  }
 
-  .contact__link:hover &,
-  .contact__link:focus & {
-    fill: map-get($colors, "link");
-    transition: fill 250ms $transitionTimingFunction;
+    .contact__link:hover &,
+    .contact__link:focus & {
+      fill: map-get($colors, "link");
+      transition: fill 250ms $transitionTimingFunction;
+    }
   }
 }
 
