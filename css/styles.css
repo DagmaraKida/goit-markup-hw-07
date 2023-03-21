@@ -76,14 +76,11 @@ ul {
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.02em;
+  gap: 32px;
 }
 
 .nav__link {
   padding: 32px 0;
-}
-
-.nav__link:not(:last-child) {
-  margin-right: 32px;
 }
 
 .nav__link--active {
@@ -112,15 +109,14 @@ ul {
   display: flex;
   margin-left: auto;
   align-items: center;
+  gap: 50px;
 }
 
-.contact li:not(:last-child) {
-  margin-right: 50px;
-}
 .contact__link {
   display: flex;
   align-items: center;
 }
+
 .contact__icon {
   margin-right: 10px;
   fill: #757575;
@@ -201,7 +197,7 @@ a:focus {
 
 /* --HERO SECTION-- */
 
-.hero-section {
+.hero__section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -303,25 +299,22 @@ h5 /* .examples__label */ {
 
 .work__image {
   margin: 0;
+  position: relative;
+  height: 294px;
 }
 
 .work__image:not(last-child) {
   margin-right: 30;
 }
 
-.work__cards figure {
-  position: relative;
-  height: 294px;
-}
-
-.work__cards figcaption {
+.work__label {
   position: absolute;
   bottom: 0;
   width: 100%;
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.work__label {
+.work__description {
   padding: 27px 0;
   margin: 0;
   color: var(--white);
@@ -374,7 +367,7 @@ h5 /* .examples__label */ {
   margin-top: 50px;
 }
 
-.icon {
+.client__icon {
   fill: #afb1b8;
 }
 
@@ -395,8 +388,8 @@ h5 /* .examples__label */ {
   transition: border-color 250ms var(--cubic-bezier);
 }
 
-.client__link:hover .icon,
-.client__link:focus .icon {
+.client__link:hover .client__icon,
+.client__link:focus .client__icon {
   fill: var(--blue);
   transition: fill 250ms var(--cubic-bezier);
 }
@@ -547,7 +540,6 @@ h5 /* .examples__label */ {
   margin-bottom: 9px;
 }
 
-
 .footer__social-links {
   margin-right: 98px;
 }
@@ -561,7 +553,7 @@ h5 /* .examples__label */ {
   margin-bottom: 20px;
 }
 
-.icon-send {
+.newsletter__icon {
   margin-left: 24px;
   fill: var(--white);
 }
@@ -630,7 +622,7 @@ h5 /* .examples__label */ {
   margin-bottom: 12px;
 }
 
-form[name="modal-form"] {
+.modal__form {
   display: flex;
   flex-direction: column;
   gap: 10px;

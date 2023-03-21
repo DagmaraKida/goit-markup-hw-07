@@ -81,6 +81,7 @@ select {
 [type="reset"],
 [type="submit"],
 button {
+  appearance: button;
   -webkit-appearance: button;
 }
 ::-moz-focus-inner {
@@ -104,6 +105,7 @@ progress {
   height: auto;
 }
 [type="search"] {
+  appearance: textfield;
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }

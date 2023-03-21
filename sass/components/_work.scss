@@ -1,3 +1,43 @@
+/* no class .work only */
+
+.work {
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  &__image {
+    margin: 0;
+    position: relative;
+    height: 294px;
+
+    &:not(last-child) {
+      margin-right: 30;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: map-get($colors, "boxed");
+  }
+
+  &__description {
+    padding: 27px 0;
+    margin: 0;
+    color: map-get($colors, "light");
+    @include font(14px, 700, 1, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+/* ORIGINAL -before changes work__label into work__description
+figcaption into class work__label/
+
+
 .work__cards {
   display: flex;
   justify-content: space-between;
@@ -32,3 +72,45 @@
   text-align: center;
   text-transform: uppercase;
 }
+ */
+
+/* EDITED WITH CHANGES in HTML 
+
+
+.work__cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.work__image {
+  margin: 0;
+  position: relative;
+  height: 294px;
+}
+
+.work__image:not(last-child) {
+  margin-right: 30;
+}
+
+.work__label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: map-get($colors, "boxed");
+}
+
+.work__description {
+  padding: 27px 0;
+  margin: 0;
+  color: map-get($colors, "light");
+  @include font(14px, 700, 1, 0.03em);
+  text-align: center;
+  text-transform: uppercase;
+}
+ */
+/*  it was like this before moving to work__image
+ .work__cards figure {
+          position: relative;
+          height: 294px;
+        } */
