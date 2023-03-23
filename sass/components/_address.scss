@@ -1,39 +1,16 @@
 .address {
-  margin-right: 80px;
-
   &__links {
     font-style: normal;
     @include font(14px, 400, 1.71, 0.03em);
     color: map-get($colors, "light");
     margin-top: 20px;
+
+    :not(:first-child) {
+      opacity: 0.6;
+    }
+
+    :not(:last-child) {
+      margin-bottom: 9px;
+    }
   }
 }
-
-.contact {
-  opacity: 0.6;
-}
-
-.address__link:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-/* .address {
-  margin-right: 80px;
-}
-
-.address__links {
-  font-style: normal;
-  @include font(14px, 400, 1.71, 0.03em);
-  color: map-get($colors, "light");
-  margin-top: 20px;
-}
-
-.contact {
-  opacity: 0.6;
-}
-
-.address__link:not(:last-child) {
-  margin-bottom: 9px;
-}
-
- */
